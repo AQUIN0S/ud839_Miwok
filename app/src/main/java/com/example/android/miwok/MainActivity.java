@@ -18,40 +18,51 @@ package com.example.android.miwok;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-
-import butterknife.ButterKnife;
-import butterknife.OnClick;
+import android.view.View;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
     @Override protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ButterKnife.bind(this);
-    }
 
-    @OnClick(R.id.numbers)
-    public void openNumbersActivity() {
-        Intent OpenNumbers = new Intent(this, NumbersActivity.class);
-        startActivity(OpenNumbers);
-    }
+        TextView numbersButton = (TextView) findViewById(R.id.numbers);
+        numbersButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent OpenNumbers = new Intent(MainActivity.this, NumbersActivity.class);
+                startActivity(OpenNumbers);
+            }
+        });
 
-    @OnClick(R.id.family)
-    public void openFamilyActivity() {
-        Intent OpenFamily = new Intent(this, FamilyActivity.class);
-        startActivity(OpenFamily);
-    }
+        TextView familyButton = (TextView) findViewById(R.id.family);
+        familyButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent OpenFamily = new Intent(MainActivity.this, FamilyActivity.class);
+                startActivity(OpenFamily);
+            }
+        });
 
-    @OnClick(R.id.colors)
-    public void openColorsActivity() {
-        Intent OpenColors = new Intent(this, ColorsActivity.class);
-        startActivity(OpenColors);
-    }
+        TextView ColorsButton = (TextView) findViewById(R.id.colors);
+        ColorsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent OpenColors = new Intent(MainActivity.this, ColorsActivity.class);
+                startActivity(OpenColors);
+            }
+        });
 
-    @OnClick(R.id.phrases)
-    public void openPhrasesActivity() {
-        Intent OpenPhrases = new Intent(this, PhrasesActivity.class);
-        startActivity(OpenPhrases);
+        TextView PhrasesButton = (TextView) findViewById(R.id.phrases);
+        PhrasesButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent OpenPhrases = new Intent(MainActivity.this, PhrasesActivity.class);
+                startActivity(OpenPhrases);
+            }
+        });
+
     }
 
 }
