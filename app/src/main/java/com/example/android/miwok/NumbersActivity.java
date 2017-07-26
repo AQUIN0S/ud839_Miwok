@@ -24,7 +24,7 @@ import java.util.ArrayList;
 
 public class NumbersActivity extends AppCompatActivity {
 
-    private ArrayList<String> words = new ArrayList<>();
+    private ArrayList<Word> words = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,8 +32,7 @@ public class NumbersActivity extends AppCompatActivity {
         setContentView(R.layout.activity_numbers);
         setWords();
 
-        ArrayAdapter<String> itemsAdapter = new ArrayAdapter<>(this,
-                android.R.layout.simple_list_item_1, words);
+        ArrayAdapter<Word> itemsAdapter = new ArrayAdapter<>(this, R.layout.list_item, words);
 
         ListView listView = (ListView) findViewById(R.id.list);
 
@@ -41,15 +40,15 @@ public class NumbersActivity extends AppCompatActivity {
     }
 
     private void setWords() {
-        words.add("One");
-        words.add("Two");
-        words.add("Three");
-        words.add("Four");
-        words.add("Five");
-        words.add("Six");
-        words.add("Seven");
-        words.add("Eight");
-        words.add("Nine");
-        words.add("Ten");
+        words.add(new Word("Lutti", "One"));
+        words.add(new Word("Otiiko", "Two"));
+        words.add(new Word("Tolookosu", "Three"));
+        words.add(new Word("Oyyisa", "Four"));
+        words.add(new Word("Massokka", "Five"));
+        words.add(new Word("Temmokka", "Six"));
+        words.add(new Word("Kenekaku", "Seven"));
+        words.add(new Word("Kawinta", "Eight"));
+        words.add(new Word("Wo'e", "Nine"));
+        words.add(new Word("Na'aacha", "Ten"));
     }
 }
