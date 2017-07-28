@@ -40,9 +40,8 @@ public class WordAdapter extends ArrayAdapter {
      */
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        // Check if the existing view is being reused, otherwise inflate the view. This part I
-        // understand the concept, but not fully the implementation. I don't believe this will be
-        // the origin of any errors however.
+        // Check if the existing view is being reused, otherwise inflate a new view from the layout.
+        // I get it now!
         View listItemView = convertView;
         if(listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(
