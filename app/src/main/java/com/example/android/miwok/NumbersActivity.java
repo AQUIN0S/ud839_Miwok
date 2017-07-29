@@ -28,7 +28,7 @@ public class NumbersActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_numbers);
+        setContentView(R.layout.word_list);
         setWords();
 
         // Create a new WordAdapter which creates a list item for each word and attach it to the
@@ -50,4 +50,5 @@ public class NumbersActivity extends AppCompatActivity {
         words.add(new Word("Wo'e", "Nine"));
         words.add(new Word("Na'aacha", "Ten"));
     }
+
 }
