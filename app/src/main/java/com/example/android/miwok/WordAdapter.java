@@ -15,6 +15,7 @@ import java.util.ArrayList;
  * understand most of it but would have
  */
 public class WordAdapter extends ArrayAdapter {
+    private int themeColour;
 
     /**
      * This constructor doesn't mirror a superclass constructor.
@@ -26,8 +27,9 @@ public class WordAdapter extends ArrayAdapter {
      * @param context       The current context. Used to inflate the layout file.
      * @param words         A List of AndroidFlavor objects to display in a list
      */
-    public WordAdapter(Activity context, ArrayList<Word> words) {
+    public WordAdapter(Activity context, ArrayList<Word> words, int themeColour) {
         super(context, 0, words);
+        this.themeColour = themeColour;
     }
 
     /**
@@ -66,6 +68,9 @@ public class WordAdapter extends ArrayAdapter {
         } else {
             itemImageView.setVisibility(View.GONE);
         }
+
+        // Set the background colour of the TextView
+        listItemView.findViewById(R.id.text_views_layout).setBackgroundColor(themeColour);
 
         return listItemView;
     }

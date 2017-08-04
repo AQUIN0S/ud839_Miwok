@@ -15,6 +15,7 @@
  */
 package com.example.android.miwok;
 
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ListView;
@@ -33,7 +34,8 @@ public class FamilyActivity extends AppCompatActivity {
 
         // Create a new WordAdapter which creates a list item for each word and attach it to the
         // parent listView.
-        WordAdapter itemsAdapter = new WordAdapter(this, words);
+        WordAdapter itemsAdapter = new WordAdapter(this, words,
+                ContextCompat.getColor(this, R.color.category_family));
         ListView listView = (ListView) findViewById(R.id.list);
         listView.setAdapter(itemsAdapter);
     }
