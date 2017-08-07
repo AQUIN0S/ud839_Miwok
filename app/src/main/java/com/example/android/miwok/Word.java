@@ -9,16 +9,20 @@ public class Word {
     private String miwokTranslation;
     private String defaultTranslation;
     private int imageResourceID;
+    private int musicResourceID;
 
-    public Word(String miwokTranslation, String defaultTranslation, int imageResourceID) {
+    public Word(String miwokTranslation, String defaultTranslation, int imageResourceID,
+                int musicResourceID) {
         this.defaultTranslation = defaultTranslation;
         this.miwokTranslation = miwokTranslation;
         this.imageResourceID = imageResourceID;
+        this.musicResourceID = musicResourceID;
     }
 
-    public Word(String miwokTranslation, String defaultTranslation) {
+    public Word(String miwokTranslation, String defaultTranslation, int musicResourceID) {
         this.defaultTranslation = defaultTranslation;
         this.miwokTranslation = miwokTranslation;
+        this.musicResourceID = musicResourceID;
     }
 
     public void setMiwokTranslation(String miwokTranslation) {
@@ -33,6 +37,10 @@ public class Word {
         this.imageResourceID = imageResourceID;
     }
 
+    public void setMusicResourceID(int musicResourceID) {
+        this.musicResourceID = musicResourceID;
+    }
+
     public String getMiwokTranslation() {
         return miwokTranslation;
     }
@@ -45,4 +53,7 @@ public class Word {
         return imageResourceID;
     }
 
+    public int getMusicResourceID() {
+        return musicResourceID;
+    }
 }
