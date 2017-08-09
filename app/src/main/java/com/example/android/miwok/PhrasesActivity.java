@@ -31,9 +31,9 @@ public class PhrasesActivity extends AppCompatActivity {
     private MediaPlayer mediaPlayer;
 
     /**
-     +     * This listener gets triggered when the {@link MediaPlayer} has completed
-     +     * playing the audio file.
-     +     */
+     * This listener gets triggered when the {@link MediaPlayer} has completed
+     * playing the audio file.
+     */
     private MediaPlayer.OnCompletionListener completionListener = new MediaPlayer.OnCompletionListener() {
         @Override
         public void onCompletion(MediaPlayer mediaPlayer) {
