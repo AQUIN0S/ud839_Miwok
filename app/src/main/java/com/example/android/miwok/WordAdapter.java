@@ -75,14 +75,6 @@ public class WordAdapter extends ArrayAdapter {
         // Set the background colour of the TextView
         listItemView.findViewById(R.id.text_views_layout).setBackgroundColor(themeColour);
 
-        listItemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                MediaPlayer mediaPlayer = MediaPlayer.create(getContext(), currentWord.getMusicResourceID());
-                mediaPlayer.start();
-            }
-        });
-
         return listItemView;
     }
 
