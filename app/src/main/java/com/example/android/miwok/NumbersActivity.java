@@ -38,7 +38,7 @@ public class NumbersActivity extends AppCompatActivity {
         @Override
         public void onCompletion(MediaPlayer mediaPlayer) {
             // Now that the sound file has finished playing, release the media player resources.
-            mediaPlayer.release();
+            releaseMediaPlayer();
         }
     };
 

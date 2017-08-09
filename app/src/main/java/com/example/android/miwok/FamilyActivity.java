@@ -38,7 +38,7 @@ public class FamilyActivity extends AppCompatActivity {
         @Override
         public void onCompletion(MediaPlayer mediaPlayer) {
             // Now that the sound file has finished playing, release the media player resources.
-            mediaPlayer.release();
+            releaseMediaPlayer();
         }
     };
 
@@ -79,8 +79,8 @@ public class FamilyActivity extends AppCompatActivity {
     }
 
     /**
-     +     * Clean up the media player by releasing its resources.
-     +     */
+     * Clean up the media player by releasing its resources.
+     */
     private void releaseMediaPlayer() {
         // If the media player is not null, then it may be currently playing a sound.
         if (mediaPlayer != null) {
