@@ -65,6 +65,12 @@ public class PhrasesActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onStop() {
+        releaseMediaPlayer();
+        super.onStop();
+    }
+
     private void setWords() {
         words.add(new Word("minto wuksus", "Where are you going?", R.raw.phrase_where_are_you_going));
         words.add(new Word("tinnә oyaase'nә", "What is your name?", R.raw.phrase_what_is_your_name));

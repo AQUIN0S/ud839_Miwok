@@ -65,6 +65,12 @@ public class ColorsActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onStop() {
+        releaseMediaPlayer();
+        super.onStop();
+    }
+
     private void setWords() {
         words.add(new Word("weṭeṭṭi", "red", R.drawable.color_red, R.raw.color_red));
         words.add(new Word("chokokki", "green", R.drawable.color_green, R.raw.color_green));

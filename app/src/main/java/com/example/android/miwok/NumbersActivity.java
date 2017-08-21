@@ -67,6 +67,12 @@ public class NumbersActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onStop() {
+        releaseMediaPlayer();
+        super.onStop();
+    }
+
     private void setWords() {
         words.add(new Word("Lutti", "One", R.drawable.number_one, R.raw.number_one));
         words.add(new Word("Otiiko", "Two", R.drawable.number_two, R.raw.number_two));
