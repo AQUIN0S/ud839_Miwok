@@ -28,7 +28,7 @@ import java.util.ArrayList;
 public class NumbersActivity extends AppCompatActivity {
 
     private ArrayList<Word> words = new ArrayList<>();
-    private MediaPlayer mediaPlayer;
+    private MediaPlayer mediaPlayer = new MediaPlayer();
 
     /**
      * This listener gets triggered when the {@link MediaPlayer} has completed
@@ -57,8 +57,6 @@ public class NumbersActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                // Release the media player if it currently exists because we are about to
-                // play a different sound file
                 releaseMediaPlayer();
                 mediaPlayer = MediaPlayer.create(NumbersActivity.this, words.get(position).getMusicResourceID());
                 mediaPlayer.start();

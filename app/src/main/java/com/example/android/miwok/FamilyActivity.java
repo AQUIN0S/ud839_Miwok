@@ -28,7 +28,7 @@ import java.util.ArrayList;
 public class FamilyActivity extends AppCompatActivity {
 
     private ArrayList<Word> words = new ArrayList<>();
-    private MediaPlayer mediaPlayer;
+    private MediaPlayer mediaPlayer = new MediaPlayer();
 
     /**
      * This listener gets triggered when the {@link MediaPlayer} has completed
