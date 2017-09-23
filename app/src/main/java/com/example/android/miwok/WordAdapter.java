@@ -16,7 +16,7 @@ import java.util.ArrayList;
  * This class was mostly based off of the ud839_CustomAdapter_Example project on GitHub... I
  * understand most of it but would have
  */
-public class WordAdapter extends ArrayAdapter {
+class WordAdapter extends ArrayAdapter {
     private int themeColour;
 
     /**
@@ -29,7 +29,7 @@ public class WordAdapter extends ArrayAdapter {
      * @param context       The current context. Used to inflate the layout file.
      * @param words         A List of AndroidFlavor objects to display in a list
      */
-    public WordAdapter(Activity context, ArrayList<Word> words, int themeColour) {
+    WordAdapter(Activity context, ArrayList<Word> words, int themeColour) {
         super(context, 0, words);
         this.themeColour = themeColour;
     }
